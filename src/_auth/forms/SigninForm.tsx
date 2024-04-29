@@ -14,7 +14,7 @@ import { useUserContext } from "@/context/AuthContext"
 
 const SigninForm = () => {
   const { toast } = useToast()
-  const { checkAuthUser, isLoading: isUserLoading } = useUserContext
+  const { checkAuthUser, isLoading: isUserLoading } = useUserContext()
   const navigate = useNavigate()
 
 
@@ -31,7 +31,7 @@ const SigninForm = () => {
   })
  
   // 2. Define a submit handler.
-  async function onSubmit(values: z.infer<typeof SigninValidation>) {
+  async function onSubmit(values: z.infer<typeof SigninValidation>){
     const session = await signInAccount({
       email: values.email,
       password: values.password,
