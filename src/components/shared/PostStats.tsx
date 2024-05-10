@@ -2,7 +2,7 @@ import { Models } from "appwrite"
 import React, { useState, useEffect } from "react"
 import { useDeleteSavedPost, useLikePost, useSavePost, useGetCurrentUser } from "@/lib/react-query/queriesAndMutations"
 import { checkIsLiked } from "@/lib/utils"
-import { Loader } from "lucide-react"
+import Loader from "./Loader"
 
 type PostStatsProps = {
     post: Models.Document
